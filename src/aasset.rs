@@ -75,11 +75,11 @@ pub(crate) unsafe fn asset_open(
     let replacement_list = [
         ("assets/gui/dist/hbui/", "hbui/"),
         ("assets/renderer/", "renderer/"),
-        ("assets/resource_packs/vanilla/cameras", "vanilla_cameras/"),
+        ("assets/behavior_packs/vanilla/recipes/", "mod/recipes/"),
         // Old paths, should not hit perf too bad
         ("gui/dist/hbui/", "hbui/"),
         ("renderer/", "renderer/"),
-        ("resource_packs/vanilla/cameras", "vanilla_cameras/"),
+        ("behavior_packs/vanilla/recipes/", "mod/recipes/"),
     ];
     for replacement in replacement_list {
         if let Ok(file) = c_path.strip_prefix(replacement.0) {
